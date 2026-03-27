@@ -221,7 +221,7 @@ const quiz = [
     },
     {
         question: "Vaskmester  11. Hvilken måte er riktig?",
-        video: "./vid/MVI_0691.mp4",
+        video: "../vid/MVI_0691.mp4",
         choices: [
             {
                 id: 1,
