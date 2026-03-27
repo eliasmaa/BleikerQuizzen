@@ -1,0 +1,446 @@
+body {
+    background-color:rgb(34, 139, 203);
+
+    margin: 0;
+
+    padding: 0;
+
+    display:flex;
+
+    flex-direction: column;
+
+    min-height: 100vh;
+
+    font-family:Helvetica;
+
+}
+
+
+main{
+
+    flex: 1;
+
+}
+
+
+a{
+
+   color:rgb(0, 0, 0);
+
+   text-decoration:none;
+}
+
+
+.navbar {
+
+    width:100%;
+
+    margin:0;
+
+    display:flex;
+
+    justify-content:space-evenly;
+
+    background-color:rgb(255, 164, 37);
+
+    position:fixed;
+
+    align-items: center;
+
+    margin-inline: auto;
+
+    font-size: 30px;
+
+    font-family:Inter;  
+
+}
+
+
+.logo{
+
+    width: 7vw;
+
+}
+
+
+.center-wrapper{
+
+    display: flex;
+
+    justify-content:center;
+
+    align-items: center;
+
+    height:50vh;
+
+}
+
+
+footer {
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    background-color:rgb(255, 164, 37);
+
+    padding:100px;  
+
+    font-size: 30px;
+
+    font-family:Inter;
+
+}
+
+
+.scroll{
+
+    height: 10vh; 
+
+    width: 400px;
+
+    overflow-y: scroll;
+
+    border: 1px solid 34, 139, 203;
+
+    padding: 10px;
+
+}
+
+
+.videotekst{
+
+    background-color: rgb(255, 255, 255);
+
+    display:inline-block;
+
+    padding: 200px;
+
+}
+
+
+.quizvelkommen{
+
+    background-color: rgb(74, 185, 253);
+
+    padding:90px;
+
+    text-align: center; 
+
+    font-size: 70px;
+
+    box-shadow: 2px 2px 10px rgb(0, 0, 0);
+
+    font-family:Inter;
+
+}
+
+
+.quizinvite{
+
+    background-color: rgb(255, 149, 0);
+
+    padding:90px;
+
+    text-align: center;
+
+    border-radius: 100%; 
+
+    box-shadow: 6px 6px 60px rgb(0, 0, 0);
+
+     transition-duration: 0.4s;
+
+}
+
+
+.quizinvite:hover{
+
+    background-color: rgb(204, 119, 0);
+
+}
+
+
+
+.spørsmål{
+
+    display:flex;
+
+    justify-content: center;
+
+    align-items:center;
+
+    background-color: rgb(255, 174, 61);
+
+    font-size:100px;
+
+}
+
+
+.svar{
+  display: grid;
+
+  /* Lager to kolonner som er like brede (1fr = 1 fraction) */
+  grid-template-columns: repeat(2, 1fr);
+
+  /* Definerer avstanden mellom firkantene */
+  gap: 50px;
+
+  /* Valgfritt: Senterer rutenettet på siden */
+  max-width: 600px;
+
+  margin: 0 auto;
+
+}
+
+
+.firkant {
+  background-color: #ffffff; /* Farge på firkanten */
+
+  color: rgb(0, 0, 0);
+
+  padding-left: 50px;
+
+  padding-right: 50px;
+
+  text-align: center;
+
+  font-size: 24px;
+
+  border-radius: 8px;
+
+  /* Sikrer at firkanten er kvadratisk ved å sette høyde lik bredde */
+  aspect-ratio: 1 / 1;
+
+  /* Senterer innholdet (tallet) inni firkanten */
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+}   
+
+
+#quizContainer {
+
+    background-color:rgb(74, 185, 253);
+
+    box-shadow: 2px 2px 10px rgb(0, 0, 0);
+
+    display:flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    max-width: 80%;
+
+    min-width: 50%;
+
+    border-radius: 20px;
+
+    padding: 50px;
+
+}
+
+
+#questionContainer {
+
+    display:flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+#quizContainer #buttons {
+
+    display:flex;
+
+    gap: 20px 50px;
+
+    flex-wrap: wrap;
+
+    margin: 0px 250px;
+
+    justify-content: center;
+
+}
+
+
+.correct {
+
+    background-color: rgb(0, 200, 13);
+
+}
+
+
+.wrong {
+
+    background-color: rgb(200, 0, 0);
+
+}
+
+
+ button {
+
+    padding: 10px 100px;
+
+    background-color:rgb(255, 149, 0);
+
+    color: rgb(0, 0, 0);
+
+    border-radius: 12px;
+
+    border: none;
+
+}
+
+
+.wrapper {
+
+    display:flex;
+
+    flex-direction: column;
+
+    align-items: center ;
+
+}
+
+
+#summary {
+
+    display:none;
+
+    flex-direction: column;
+
+}
+
+
+#video {
+
+    display:none;
+
+    padding: 50px;
+
+}
+
+
+.poster{
+
+    display: flex;  
+
+    max-width: 500px;
+
+}
+
+
+.grafisk{
+
+    display: flex;
+
+    max-width: 500px;
+
+}
+
+
+#videoindex{
+
+    display: flex; 
+
+    max-width: 500px;
+
+}
+
+
+#fargetypo{
+
+    display: flex; 
+
+    max-width: 500px;
+
+}
+
+
+.page{
+
+    box-shadow: 2px 2px 10px rgb(0, 0, 0);
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    justify-content: space-evenly;
+
+    font-size: 40px;
+
+    background-color:rgb(74, 185, 253);
+
+    padding:100px;
+
+    transition-duration: 0.4s;
+
+}
+
+
+.imagesize{
+
+    display: flex;
+
+    max-width: 800px;
+
+    border-radius: 10%;
+
+}
+
+
+#startbilde{
+
+    position: absolute;
+
+    z-index: -1;
+
+    max-width: 1920px;
+
+}
+
+
+.pageover {
+
+  box-shadow: 2px 2px 10px rgb(0, 0, 0);
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    justify-content: space-evenly;
+
+    font-size: 40px;
+
+    background-color:rgb(19, 130, 199);
+
+    padding:100px;
+
+    font-family: Inter;
+
+}
+
+.pagetekst{
+
+    padding: 5px;
+
+}
