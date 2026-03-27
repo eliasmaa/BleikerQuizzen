@@ -263,7 +263,7 @@ function loadQuiz() {
 
 
 function checkAnswer(buttonId, correctAnswer) {
-    count++;
+    
     let isCorrect = buttonId === correctAnswer;
     if(isCorrect && !chosenAnswer) {
         chosenAnswer = true;
@@ -282,7 +282,7 @@ function checkAnswer(buttonId, correctAnswer) {
 }
 
 function nextQuestion() {
-
+    count++;
     let nextElement = quiz[count];
 
     let h2 = document.getElementById("question");
