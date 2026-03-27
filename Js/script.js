@@ -154,7 +154,7 @@ const quiz = [
         correctAnswer: 3
     },
     {
-        question: "Informasjonsteknologi og medieproduksjon  8. Hva betyr HTML?",
+        question: "Informasjonsteknologi og medieproduksjon  8. Hva betyr html?",
         choices: [
             {
                 id: 1,
@@ -256,7 +256,7 @@ function loadQuiz() {
     h2.textContent += `${firstElement.question}`
     let buttons = firstElement.choices;
     buttons.forEach(button => {
-        buttonsContainer.innerHTML += `<button id="${button.id}" onclick="checkAnswer(${button.id}, ${firstElement.correctAnswer})">${button.label}</button>`
+        buttonsContainer.innerhtml += `<button id="${button.id}" onclick="checkAnswer(${button.id}, ${firstElement.correctAnswer})">${button.label}</button>`
     });
 }
 
@@ -277,7 +277,7 @@ function checkAnswer(buttonId, correctAnswer) {
     }
     if(chosenAnswer) {
         let nextButton = document.getElementById("next");
-        nextButton.innerHTML = `<button onClick="nextQuestion()">Next</button>`
+        nextButton.innerhtml = `<button onClick="nextQuestion()">Next</button>`
     }
 }
 
@@ -301,9 +301,9 @@ function nextQuestion() {
 
     h2.textContent = ``
 
-    buttonsContainer.innerHTML = "";
+    buttonsContainer.innerhtml = "";
 
-    nextButton.innerHTML = "";
+    nextButton.innerhtml = "";
 
     h2.textContent += `${nextElement.question}`
 
@@ -315,7 +315,7 @@ function nextQuestion() {
 
         videoContainer.style.display = "flex"
 
-        videoContainer.innerHTML = `<video width="500" height="400" controls>
+        videoContainer.innerhtml = `<video width="500" height="400" controls>
 
         <source src="${nextElement.video}" type="video/mp4">
 
@@ -328,7 +328,7 @@ function nextQuestion() {
 
     buttons.forEach(button => {
 
-        buttonsContainer.innerHTML += `<button id="${button.id}" onclick="checkAnswer(${button.id}, ${nextElement.correctAnswer})">${button.label}</button>`
+        buttonsContainer.innerhtml += `<button id="${button.id}" onclick="checkAnswer(${button.id}, ${nextElement.correctAnswer})">${button.label}</button>`
 
     });
 
@@ -386,7 +386,7 @@ function displayLeaderboard() {
 
   let list = document.getElementById("leaderboard");
 
-  list.innerHTML = "";
+  list.innerhtml = "";
 
   leaderboard.forEach((player, index) => {
 
