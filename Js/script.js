@@ -363,7 +363,7 @@ function saveScore(finalScore) {
 
   if (!name) return;
 
-  let leaderboard = jsON.parse(localStorage.getItem("leaderboard")) || [];
+  let leaderboard = JSON.parse(localStorage.getItem("leaderboard")) || [];
 
   leaderboard.push({ name: name, score: finalScore });
 
@@ -374,7 +374,7 @@ function saveScore(finalScore) {
   // lagre tilbake
   leaderboard = leaderboard.slice(0, 10);
 
-  localStorage.setItem("leaderboard", jsON.stringify(leaderboard));
+  localStorage.setItem("leaderboard", JSON.stringify(leaderboard));
 }
 
 // når spillet er ferdig
@@ -382,7 +382,7 @@ function saveScore(finalScore) {
 
 function displayLeaderboard() {
 
-  let leaderboard = jsON.parse(localStorage.getItem("leaderboard")) || [];
+  let leaderboard = JSON.parse(localStorage.getItem("leaderboard")) || [];
 
   let list = document.getElementById("leaderboard");
 
